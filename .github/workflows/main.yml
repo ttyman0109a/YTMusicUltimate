@@ -101,7 +101,7 @@ jobs:
           cd ${{ github.workspace }}/main
           make clean package SIDELOADING=1 WERROR=0 \
              ADDITIONAL_OBJCXXFLAGS="-Wno-vla-cxx-extension -Wnoerror=vla-cxx-extension" \
-             ADDITIONAL_CXXFLAGS="Wno-vla -Wno-error=vla"
+             ADDITIONAL_CFLAGS="Wno-vla -Wno-error=vla"
           
         env:
           THEOS: ${{ github.workspace }}/theos
